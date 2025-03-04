@@ -9,7 +9,7 @@
     </head>
     <body class="font-sans leading-normal tracking-normal">
         <?php get_header(); ?>
-        <div class="container w-full md:max-w-3xl mx-auto pt-20">
+        <div class="container w-full md:max-w-3xl mx-auto pt-20 pb-20">
             <?php 
                 if ( have_posts() ) : 
                     while ( have_posts() ) : 

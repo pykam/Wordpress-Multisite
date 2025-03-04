@@ -1,5 +1,5 @@
 
-<nav id="header" class="fixed w-full z-10 top-0">
+<nav id="header" class="w-full z-10 top-0">
 
     <div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
 
@@ -20,18 +20,8 @@
             </button>
         </div>
 
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id="nav-content">
-            <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                <li class="mr-3">
-                    <a class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="#">Active</a>
-                </li>
-                <li class="mr-3">
-                    <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#">link</a>
-                </li>
-                <li class="mr-3">
-                    <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#">link</a>
-                    </li>
-                    </ul>
+        <div class="w-full flex-grow justify-end lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id="nav-content">
+            <?php wp_nav_menu(); ?>
         </div>
     </div>
 </nav>

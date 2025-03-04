@@ -3,3 +3,12 @@ Theme Name: Multisite
 */
 
 @import "tailwindcss";
+
+#menu-main-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#menu-main-menu .menu-item {
+    margin-right: 1em;
+}
