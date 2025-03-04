@@ -43,6 +43,9 @@
         </div>
         <?php 
 
+            /**
+             * Тут жесткое прописывание доменов, знаю что так делать нельзя)
+             */
             $blog_details = get_blog_details();
 
             if ($blog_details->domain === 'site1.multisite') {
