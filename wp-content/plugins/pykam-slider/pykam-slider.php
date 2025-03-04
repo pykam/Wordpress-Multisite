@@ -48,3 +48,29 @@ function pykam_slides_admin_script( $hook ) {
 
 add_action( 'admin_enqueue_scripts', 'pykam_slides_admin_script' );
 
+
+/**
+ * Shortcode for Slider post type
+ */
+function pykam_slider_shortcode( $atts ) {
+
+    $content = '';
+
+    if (!isset($atts[0])) {
+        return $content;
+    }
+
+    $slides = get_post_meta($atts[0], 'pykam_slider_image_source', true);
+    $content .= '<div class="pykam-slides">';
+
+    foreach ($slides as $slide) {
+        $content .= '<div class="pykam-slide"><img src="' . $slide . '" /></div>';
+    }
+    $content .= '</div>';
+
+	return $content;
+
+}
+
+add_shortcode( 'pykam-slider', 'pykam_slider_shortcode' );
+
