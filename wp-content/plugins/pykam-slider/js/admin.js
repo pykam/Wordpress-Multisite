@@ -2,7 +2,11 @@ jQuery(function($){
 
     const layout = $('.pykam-slider-images');
     const fieldname = 'pykam_slider_image_source'; //PYKAM_SLIDE_FIELD
-    const data = JSON.parse($("#slides").text());
+    let data = []
+    if ($("#slides").length > 0) {
+        data = JSON.parse($("#slides").text());
+    }
+    
 
     if (data.length) {
         data.forEach(function(url) {
