@@ -12,6 +12,7 @@
 	exit;
  }
 
+ require_once __DIR__ . '/pykam_slider_assets.php';
  require_once __DIR__ . '/pykam_slider_metabox.php';
 
  /**
@@ -35,21 +36,6 @@ add_action( 'init', 'pykam_setup_post_type' );
 
 
 /**
- * Load the admin area JS
- */
-function pykam_slides_admin_script( $hook ) {
-
-	if ( ! did_action( 'wp_enqueue_media' ) ) {
-		wp_enqueue_media();
-	}
-	
- 	wp_enqueue_script( 'pykam_slide_admin_script', plugin_dir_url( __FILE__ ) . '/js/admin.js', array('jquery'), null, false );
-}
-
-add_action( 'admin_enqueue_scripts', 'pykam_slides_admin_script' );
-
-
-/**
  * Shortcode for Slider post type
  */
 function pykam_slider_shortcode( $atts ) {
@@ -61,11 +47,18 @@ function pykam_slider_shortcode( $atts ) {
     }
 
     $slides = get_post_meta($atts[0], 'pykam_slider_image_source', true);
-    $content .= '<div class="pykam-slides">';
+    $content .= '<div class="swiper">';
+    $content .= '<div class="swiper-wrapper">';
 
     foreach ($slides as $slide) {
-        $content .= '<div class="pykam-slide"><img src="' . $slide . '" /></div>';
+        $content .= '<div class="swiper-slide">';
+        $content .= '<img src="' . $slide . '" />';
+        $content .= '</div>';
     }
+    $content .= '</div>';
+    $content .= '<div class="swiper-button-prev"></div>';
+    $content .= '<div class="swiper-button-next"></div>';
+
     $content .= '</div>';
 
 	return $content;

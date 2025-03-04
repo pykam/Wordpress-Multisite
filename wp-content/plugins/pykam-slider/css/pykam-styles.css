@@ -1,0 +1,12 @@
+.swiper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
