@@ -1,6 +1,6 @@
 # Wordpress тема с поддержкой tailwindcss
 
-Реализована поддержка компиляции стилей tailwindcss
+Компиляции стилей tailwindcss
 
 ```
 cd ../wp-content/themes/multisite
