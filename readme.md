@@ -1,6 +1,6 @@
 # Wordpress theme with tailwindcss support
 
-Implemented support for tailwindcss style compilation
+Реализована поддержка компиляции стилей tailwindcss
 
 ```
 cd ../wp-content/themes/multisite
@@ -16,5 +16,5 @@ Depending on the subdomain, the site footer changes
 
 A plugin has been developed that adds a slider based on Swiper.js
 
-Adding sliders is implemented as a separate post type `slider`
-The output is carried out using a shortcode. See the Slider creation page, there is a hint with the shortcode code
+Добавление слайдеров реализована в виде отдельного типа записей `slider`
+Вывод осуществляется с помощью шорткода. См. страницу создания Слайдера, там есть подсказка с кодом шорткода
